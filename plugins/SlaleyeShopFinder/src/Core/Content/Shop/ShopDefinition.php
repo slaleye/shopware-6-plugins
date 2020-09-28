@@ -18,7 +18,7 @@ use Shopware\Core\System\Country\CountryDefinition;
 
 class ShopDefinition extends EntityDefinition
 {
-    public const ENTITY_NAME = 'slaleye_shop';
+    public const ENTITY_NAME = 'slaleye_shop_finder_shop';
 
 
     public function getEntityName(): string

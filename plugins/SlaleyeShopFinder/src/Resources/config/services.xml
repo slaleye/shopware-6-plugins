@@ -8,5 +8,14 @@
         <service id="Slaleye\ShopFinder\Core\Content\Shop\ShopDefinition">
             <tag name="shopware.entity.definition" entity="slaleye_shop"></tag>
         </service>
+
+        <service id="Slaleye\ShopFinder\Core\Api\DemoDataController" public="true">
+            <argument id="country.repository" type="service"></argument>
+            <argument id="slaleye_shop_finder_shop.repository" type="service"></argument>
+
+            <call method="setContainer">
+                <argument id="service_container" type="service"></argument>
+            </call>
+        </service>
     </services>
 </container>
