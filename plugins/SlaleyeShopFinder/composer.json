@@ -1,18 +1,22 @@
 {
-  "name": "swag/plugin-skeleton",
-  "description": "Skeleton plugin",
+  "name": "slaleye/shop-finder",
+  "description": "Shop finder",
   "type": "shopware-platform-plugin",
   "license": "MIT",
+  "version": "v0.0.1",
+  "authors": [
+        {"name": "slaleye"}
+    ],
   "autoload": {
     "psr-4": {
-      "SlaleyeShopFinder\\": "src/"
+      "Slaleye\\ShopFinder\\": "src/"
     }
   },
   "extra": {
-    "shopware-plugin-class": "SlaleyeShopFinder\\SlaleyeShopFinder",
+    "shopware-plugin-class": "Slaleye\\ShopFinder\\ShopFinder",
     "label": {
-      "de-DE": "Skeleton plugin",
-      "en-GB": "Skeleton plugin"
+      "de-DE": "Shop finder",
+      "en-GB": "Shop finder"
     }
   }
 }
