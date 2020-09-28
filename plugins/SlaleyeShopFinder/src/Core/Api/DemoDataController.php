@@ -1,5 +1,7 @@
 <?php declare(strict_types=1);
 
+namespace  Slaleye\ShopFinder\Core\Api;
+
 use Faker\Factory;
 use Shopware\Core\Framework\Context;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;

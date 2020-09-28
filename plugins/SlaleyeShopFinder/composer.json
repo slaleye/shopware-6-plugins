@@ -1,6 +1,6 @@
 {
   "name": "slaleye/shop-finder",
-  "description": "Shop finder",
+  "description": "Shop Finder",
   "type": "shopware-platform-plugin",
   "license": "MIT",
   "version": "v0.0.1",
@@ -15,8 +15,8 @@
   "extra": {
     "shopware-plugin-class": "Slaleye\\ShopFinder\\SlaleyeShopFinder",
     "label": {
-      "de-DE": "Shop finder",
-      "en-GB": "Shop finder"
+      "de-DE": "shop Finder",
+      "en-GB": "Shop Finder"
     }
   }
 }
