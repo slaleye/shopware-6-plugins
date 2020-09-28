@@ -17,6 +17,6 @@ class ShopCollection extends EntityCollection
 {
     protected function getExpectedClass(): string
     {
-        // TODO return ShopEntity::class;
+       return ShopEntity::class;
     }
 }

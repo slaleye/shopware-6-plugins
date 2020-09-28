@@ -13,7 +13,7 @@
     }
   },
   "extra": {
-    "shopware-plugin-class": "Slaleye\\ShopFinder\\ShopFinder",
+    "shopware-plugin-class": "Slaleye\\ShopFinder\\SlaleyeShopFinder",
     "label": {
       "de-DE": "Shop finder",
       "en-GB": "Shop finder"
