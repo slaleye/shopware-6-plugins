@@ -5,6 +5,7 @@ namespace Slaleye\ShopFinder\Core\Content\Shop;
 
 use Shopware\Core\Framework\DataAbstractionLayer\Entity;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityIdTrait;
+use Shopware\Core\System\Country\CountryEntity;
 
 
 class ShopEntity extends Entity
@@ -27,7 +28,7 @@ class ShopEntity extends Entity
     protected $streetName;
 
     /**
-     * @var string
+     * @var int
      */
     protected $streetNumber;
 
@@ -100,9 +101,9 @@ class ShopEntity extends Entity
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getStreetNumber(): string
+    public function getStreetNumber(): int
     {
         return $this->streetNumber;
     }
@@ -150,7 +151,7 @@ class ShopEntity extends Entity
     /**
      * @return string|null
      */
-    public function getWebsite(): string
+    public function getWebsite(): ?string
     {
         return $this->website;
     }
@@ -166,7 +167,7 @@ class ShopEntity extends Entity
     /**
      * @return string|null
      */
-    public function getTelephone(): string
+    public function getTelephone(): ?string
     {
         return $this->telephone;
     }
@@ -182,31 +183,31 @@ class ShopEntity extends Entity
     /**
      * @return string|null
      */
-    public function getOpenningHours(): string
+    public function getOpeningHours(): ?string
     {
-        return $this->openningHours;
+        return $this->openingHours;
     }
 
     /**
-     * @param string|null $openningHours
+     * @param string|null $openingHours
      */
-    public function setOpenningHours(string $openningHours)
+    public function setOpeningHours(string $openingHours)
     {
-        $this->openningHours = $openningHours;
+        $this->openingHours = $openingHours;
     }
 
     /**
-     * @return CountryEntitiy|null
+     * @return CountryEntity|null
      */
-    public function getCountry(): CountryEntitiy
+    public function getCountry(): ?CountryEntity
     {
         return $this->country;
     }
 
     /**
-     * @param CountryEntitiy|null $country
+     * @param CountryEntity|null $country
      */
-    public function setCountry(CountryEntitiy $country)
+    public function setCountry(CountryEntity $country)
     {
         $this->country = $country;
     }
@@ -214,7 +215,7 @@ class ShopEntity extends Entity
     /**
      * @var string|null
      */
-    protected $openningHours;
+    protected $openingHours;
 
     /**
      * @var CountryEntitiy|null

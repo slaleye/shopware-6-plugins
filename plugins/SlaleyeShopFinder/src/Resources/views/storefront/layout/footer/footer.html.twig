@@ -3,7 +3,10 @@
 {% block layout_footer_navigation_columns %}
 
     {{ parent() }}
-  {{ dump() }}
-    <h1>Hello</h1>
+    {% if page.footer.extensions.slaleye_shop_finder %}
+        {% sw_include '@Storefront/storefront/layout/footer/shop-finder-footer.html.twig' with {
+            'slaleye_shop_finder' : page.footer.extensions.slaleye_shop_finder
+        } %}
+    {% endif %}
 
 {% endblock %}

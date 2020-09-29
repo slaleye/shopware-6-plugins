@@ -8,6 +8,7 @@ use Shopware\Core\Framework\DataAbstractionLayer\Field\Flag\Required;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\IdField;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\FkField;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\BoolField;
+use Shopware\Core\Framework\DataAbstractionLayer\Field\IntField;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\StringField;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\LongTextField;
 use Shopware\Core\Framework\DataAbstractionLayer\FieldCollection;
@@ -44,15 +45,15 @@ class ShopDefinition extends EntityDefinition
             (new BoolField('active', 'active')),
             (new StringField('name', 'name'))->addFlags(new Required()),
             (new StringField('street_name', 'streetName'))->addFlags(new Required()),
-            (new StringField('street_number', 'streetNumber'))->addFlags(new Required()),
+            (new IntField('street_number', 'streetNumber'))->addFlags(new Required()),
             (new StringField('post_code', 'postCode'))->addFlags(new Required()),
             (new StringField('city', 'city'))->addFlags(new Required()),
-            (new StringField('website', 'website'))->addFlags(new Required()),
-            (new StringField('telephone', 'telephone'))->addFlags(new Required()),
-            (new LongTextField('openning_hours', 'openningHours'))->addFlags(new Required()),
+            (new StringField('website', 'website')),
+            (new StringField('telephone', 'telephone')),
+            (new LongTextField('opening_hours', 'openingHours')),
 
             (new FkField('country_id', 'countryId', CountryDefinition::class)),
-            (new ManyToOneAssociationField('country', 'countryId',CountryDefinition::class,'id',false))
+            (new ManyToOneAssociationField('country', 'country_id',CountryDefinition::class,'id',false))
            
         ]);
     }

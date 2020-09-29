@@ -1,0 +1,80 @@
+<div class="col-md-4 footer-column js-footer column">
+    <div class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger"
+         id="collapseFooterHotlineTitle"
+         data-target="#collapseFooterHotline"
+         aria-expanded="true"
+         aria-controls="collapseFooterHotline">
+        Stores
+        <div class="footer-column-toggle">
+            <span class="footer-plus-icon">
+                {% sw_icon 'plus' %}
+            </span>
+            <span class="footer-minus-icon">
+                {% sw_icon 'minus' %}
+            </span>
+        </div>
+    </div>
+    <div id="collapseFooterHotline"
+         class="footer-column-content collapse js-footer-column-content footer-contact"
+         aria-labelledby="headingOne">
+        <ul>
+            {% for shop in slaleye_shop_finder.elements %}
+                <li><a href="#" data-toggle="modal" data-target="#shop-{{ shop.id }}">{{ shop.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% for shop in slaleye_shop_finder.elements %}
+    <div class="modal"
+         tabindex="-1"
+         role="dialog"
+         id="shop-{{ shop.id }}"
+    >
+        <div class="modal-dialog"
+             role="document">
+            <div class="modal-content">
+                <div class="modal-header only-close">
+                    <h5 class="modal-title">{{ shop.name }}</h5>
+                    <button type="button"
+                            class="modal-close close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">
+                                {% sw_icon 'x' style { 'size': 'sm' } %}
+                            </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        {{ shop.name }}<br>
+                        {{ shop.streetName }} {{ shop.streetNumber }}<br>
+                        {{ shop.postCode }} {{ shop.city }}<br>
+                        {{ shop.country.name }}<br>
+                        {% if shop.telephone %}
+                            Tel: {{ shop.telephone}}<br>
+                        {% endif %}
+                        {% if shop.website %}
+                            Website: {{ shop.website}}<br>
+                        {% endif %}
+
+                    </p>
+                    {% if shop.openingHours %}
+                        <p>
+                            Opening Hours: <br>
+                            {{ shop.openingHours}}
+                        </p>
+                    {% endif %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                           Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
