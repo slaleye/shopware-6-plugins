@@ -52,7 +52,7 @@ class ShopDefinition extends EntityDefinition
             (new LongTextField('openning_hours', 'openningHours'))->addFlags(new Required()),
 
             (new FkField('country_id', 'countryId', CountryDefinition::class)),
-            (new ManyToOneAssociationField('country', 'countryId',CountryDefinition::class,id,false))
+            (new ManyToOneAssociationField('country', 'countryId',CountryDefinition::class,'id',false))
            
         ]);
     }
