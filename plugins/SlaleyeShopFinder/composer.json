@@ -16,7 +16,8 @@
     "shopware-plugin-class": "Slaleye\\ShopFinder\\SlaleyeShopFinder",
     "label": {
       "de-DE": "shop Finder",
-      "en-GB": "Shop Finder"
+      "en-GB": "Shop Finder",
+      "fr-FR": "Shop Finder"
     }
   }
 }

@@ -1,0 +1,10 @@
+{
+  "slaleye_shop_finder": {
+      "footer": {
+        "title": "Our Shops",
+        "phone": "Phone:",
+        "website": "Website:",
+        "openingHours": "Opening Hours"
+      }
+  }
+}

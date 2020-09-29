@@ -24,5 +24,14 @@
 
             <tag name="kernel.event_subscriber"></tag>
         </service>
+
+        <service id="Slaleye\ShopFinder\Resources\snippet\en_GB\SnippetFile_en_GB">
+            <tag name="shopware.snippet.file"></tag>
+        </service>
+
+        <service id="Slaleye\ShopFinder\Resources\snippet\fr_FR\SnippetFile_fr_FR">
+            <tag name="shopware.snippet.file"></tag>
+        </service>
+
     </services>
 </container>

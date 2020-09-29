@@ -4,7 +4,7 @@
          data-target="#collapseFooterHotline"
          aria-expanded="true"
          aria-controls="collapseFooterHotline">
-        Stores
+        {{ 'slaleye_shop_finder.footer.title'|trans }}
         <div class="footer-column-toggle">
             <span class="footer-plus-icon">
                 {% sw_icon 'plus' %}
@@ -52,17 +52,17 @@
                         {{ shop.postCode }} {{ shop.city }}<br>
                         {{ shop.country.name }}<br>
                         {% if shop.telephone %}
-                            Tel: {{ shop.telephone}}<br>
+                            {{ 'slaleye_shop_finder.footer.phone'|trans }} {{ shop.telephone }}<br>
                         {% endif %}
                         {% if shop.website %}
-                            Website: {{ shop.website}}<br>
+                            {{ 'slaleye_shop_finder.footer.website'|trans }} {{ shop.website }}<br>
                         {% endif %}
 
                     </p>
                     {% if shop.openingHours %}
                         <p>
-                            Opening Hours: <br>
-                            {{ shop.openingHours}}
+                            {{ 'slaleye_shop_finder.footer.openingHours'|trans }} <br>
+                            {{ shop.openingHours }}
                         </p>
                     {% endif %}
                 </div>
@@ -71,7 +71,7 @@
                             class="btn btn-secondary"
                             data-dismiss="modal"
                             aria-label="Close">
-                           Close
+                        Close
                     </button>
                 </div>
             </div>
