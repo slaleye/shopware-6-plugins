@@ -16,7 +16,7 @@ class BundleTranslationDefinition extends EntityTranslationDefinition
 
     public function getEntityName(): string
     {
-        return 'swag_bundle_translation';
+        return 'slaleye_product_bundler_bundle_translation';
     }
 
     public function getCollectionClass(): string

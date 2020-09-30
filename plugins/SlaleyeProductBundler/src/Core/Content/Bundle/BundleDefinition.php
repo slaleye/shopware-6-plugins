@@ -40,8 +40,10 @@ class BundleDefinition extends EntityDefinition
     {
         return new FieldCollection([
             (new IdField('id', 'id'))->addFlags(new Required(), new PrimaryKey()),
+            new TranslatedField('name'), // Make string name translatable
             (new StringField('discount_type', 'discountType'))->addFlags(new Required()),
             (new FloatField('discount', 'discount'))->addFlags(new Required()),
+            // Add Association for ManyToMany for products and Translation
             new ManyToManyAssociationField('products', ProductDefinition::class, BundleProductDefinition::class, 'bundle_id', 'product_id'),
             new TranslationsAssociationField(BundleTranslationDefinition::class, 'slaleye_product_bundler_bundle_id'),
         ]);

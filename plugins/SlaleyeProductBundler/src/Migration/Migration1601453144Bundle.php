@@ -64,6 +64,7 @@ class Migration1601453144Bundle extends MigrationStep
         ');
     }
 
+
     public function updateDestructive(Connection $connection): void
     {
         // implement update destructive
