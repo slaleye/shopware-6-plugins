@@ -49,7 +49,7 @@ Component.register('slaleye-product-bundler-list', {
     },
 
     created() {
-        this.repository = this.repositoryFactory.create('slaleye_product_bundler');
+        this.repository = this.repositoryFactory.create('slaleye_product_bundler_bundle');
 
         this.repository
             .search(new Criteria(), Shopware.Context.api)
