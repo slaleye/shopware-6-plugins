@@ -1,0 +1,23 @@
+{
+  "name": "slaleye/product-bundler",
+  "description": "Product Bundler",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "version": "v0.0.1",
+  "authors": [
+    {"name": "slaleye"}
+  ],
+  "autoload": {
+    "psr-4": {
+      "Slaleye\\ProductBundler\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "Slaleye\\ProductBundler\\SlaleyeProductBundler",
+    "label": {
+      "de-DE": "Produkt-Bündler",
+      "en-GB": "Product Bundler",
+      "fr-FR": "Groupeur de produits"
+    }
+  }
+}
