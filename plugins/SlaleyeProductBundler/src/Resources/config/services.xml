@@ -6,7 +6,7 @@
 
     <services>
         <service id="Slaleye\ProductBundler\Core\Content\Bundle\BundleDefinition">
-            <tag name="shopware.entity.definition" entity="slaleye_product_bundler_bundle" />
+            <tag name="shopware.entity.definition" entity="slaleye_product_bundler_bundle"/>
         </service>
 
         <service id="Slaleye\ProductBundler\Core\Content\Product\ProductExtension">
@@ -17,8 +17,9 @@
             <tag name="shopware.entity.definition" entity="slaleye_product_bundler_bundle_product"/>
         </service>
 
-        <service id="Slaleye\ProductBundler\Core\Content\Bundle\Aggregate\BundleTranslation\BundleTranslationDefinition">
-            <tag name="shopware.entity.definition" entity="slaleye_product_bundler_bundle_translation" />
+        <service
+                id="Slaleye\ProductBundler\Core\Content\Bundle\Aggregate\BundleTranslation\BundleTranslationDefinition">
+            <tag name="shopware.entity.definition" entity="slaleye_product_bundler_bundle_translation"/>
         </service>
 
     </services>

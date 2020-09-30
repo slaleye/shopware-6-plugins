@@ -23,7 +23,7 @@ class SlaleyeProductBundler extends Plugin
     public function uninstall(UninstallContext $context): void
     {
         parent::uninstall($context);
-      // if KeepUserData is set return else delete the tables created
+        // if KeepUserData is set return else delete the tables created
         if ($context->keepUserData()) {
             return;
         }

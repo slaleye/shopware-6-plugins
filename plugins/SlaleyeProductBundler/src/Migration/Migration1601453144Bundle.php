@@ -36,9 +36,9 @@ class Migration1601453144Bundle extends MigrationStep
               `product_version_id` BINARY(16) NOT NULL,
               `created_at` DATETIME(3) NOT NULL,
               PRIMARY KEY (`bundle_id`, `product_id`, `product_version_id`),
-              CONSTRAINT `fk.bundle_product.bundle_id` FOREIGN KEY (`bundle_id`)
+              CONSTRAINT `fk.slaleye_pblr_bundle_product.bundle_id` FOREIGN KEY (`bundle_id`)
                 REFERENCES `slaleye_product_bundler_bundle` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-              CONSTRAINT `fk.bundle_product.product_id__product_version_id` FOREIGN KEY (`product_id`, `product_version_id`)
+              CONSTRAINT `fk.slaleye_pblr_bundle_product.product_id_product_version_id` FOREIGN KEY (`product_id`, `product_version_id`)
                 REFERENCES `product` (`id`, `version_id`) ON DELETE CASCADE ON UPDATE CASCADE
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
         ');
@@ -56,9 +56,9 @@ class Migration1601453144Bundle extends MigrationStep
               `created_at` DATETIME(3) NOT NULL,
               `updated_at` DATETIME(3) NULL,
               PRIMARY KEY (`slaleye_product_bundler_bundle_id`, `language_id`),
-              CONSTRAINT `fk.bundle_translation.bundle_id` FOREIGN KEY (`slaleye_product_bundler_bundle_id`)
+              CONSTRAINT `fk.slaleye_pblr_bundle_translation.bundle_id` FOREIGN KEY (`slaleye_product_bundler_bundle_id`)
                 REFERENCES `slaleye_product_bundler_bundle` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-              CONSTRAINT `fk.bundle_translation.language_id` FOREIGN KEY (`language_id`)
+              CONSTRAINT `fk.slaleye_pblr_bundle_translation.language_id` FOREIGN KEY (`language_id`)
                 REFERENCES `language` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
         ');

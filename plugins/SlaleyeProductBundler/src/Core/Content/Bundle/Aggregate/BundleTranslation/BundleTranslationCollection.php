@@ -15,7 +15,6 @@ use Shopware\Core\Framework\DataAbstractionLayer\EntityCollection;
  * @method BundleTranslationEntity|null first()
  * @method BundleTranslationEntity|null last()
  */
-
 class BundleTranslationCollection extends EntityCollection
 {
     protected function getExpectedClass(): string

@@ -1,0 +1,42 @@
+{% block slaleye_product_bundler_detail %}
+    <sw-page class="slaleye-product-bundler-detail">
+        <template slot="smart-bar-actions">
+            <sw-button :routerLink="{ name: 'slaleye-product-bundler.list' }">
+                {{ $t('slaleye-product-bundler.detail.cancelButtonText') }}
+            </sw-button>
+
+            <sw-button-process
+                    :isLoading="isLoading"
+                    :processSuccess="processSuccess"
+                    variant="primary"
+                    @process-finish="saveFinish"
+                    @click="onClickSave">
+                {{ $t('slaleye-product-bundler.detail.saveButtonText') }}
+            </sw-button-process>
+        </template>
+
+        <template slot="content">
+            <sw-card-view>
+                <sw-card v-if="bundle" :isLoading="isLoading">
+                    <sw-field :label="$t('slaleye-product-bundler.detail.nameLabel')"
+                              v-model="bundle.name"></sw-field>
+                    <sw-field :label="$t('slaleye-product-bundler.detail.discountLabel')"
+                              v-model="bundle.discount"
+                              type="number"></sw-field>
+
+                    <sw-field type="radio"
+                              :label="$t('slaleye-product-bundler.detail.discountTypeLabel')"
+                              v-model="bundle.discountType"
+                              :options="options">
+                    </sw-field>
+
+                    <sw-entity-many-to-many-select
+                            :localMode="bundle.isNew()"
+                            :label="$t('slaleye-product-bundler.detail.assignProductsLabel')"
+                            :entityCollection="bundle.products">
+                    </sw-entity-many-to-many-select>
+                </sw-card>
+            </sw-card-view>
+        </template>
+    </sw-page>
+{% endblock %}

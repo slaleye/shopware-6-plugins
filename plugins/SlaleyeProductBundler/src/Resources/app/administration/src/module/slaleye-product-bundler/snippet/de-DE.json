@@ -1,0 +1,25 @@
+{
+  "slaleye-product-bundler": {
+    "general": {
+      "mainMenuItemGeneral": "Bundle",
+      "descriptionTextModule": "Bundles hier verwalten"
+    },
+    "list": {
+      "addButtonText": "Bündel hinzufügen",
+      "columnName": "Name",
+      "columnDiscountType": "Rabatt-Typ",
+      "columnDiscount": "Rabatt"
+    },
+    "detail": {
+      "nameLabel": "Name",
+      "discountLabel": "Rabatt",
+      "discountTypeLabel": "Rabatt-Typ",
+      "assignProductsLabel": "Produkte zuweisen",
+      "cancelButtonText": "Abbrechen",
+      "saveButtonText": "Speichern",
+      "errorTitle": "Fehler beim Speichern des Bundles",
+      "absoluteText": "absolut",
+      "percentageText": "Prozentsatz"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{% block slaleye_product_bundler_list %}
+    <sw-page class="slaleye-product-bundler-list">
+        <template slot="content">
+            {% block slaleye_product_bundler_list_content %}
+                <sw-entity-listing
+                        v-if="bundles"
+                        :items="bundles"
+                        :repository="repository"
+                        :showSelection="false"
+                        :columns="columns"
+                        detailRoute="slaleye.product.bundler.detail">
+                </sw-entity-listing>
+            {% endblock %}
+        </template>
+    </sw-page>
+{% endblock %}

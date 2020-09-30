@@ -5,7 +5,9 @@
   "license": "MIT",
   "version": "v0.0.1",
   "authors": [
-    {"name": "slaleye"}
+    {
+      "name": "slaleye"
+    }
   ],
   "autoload": {
     "psr-4": {

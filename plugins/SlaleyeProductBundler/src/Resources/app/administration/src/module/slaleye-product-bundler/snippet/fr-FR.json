@@ -1,0 +1,25 @@
+{
+  "slaleye-product-bundler": {
+    "general": {
+      "mainMenuItemGeneral": "Offres Groupées",
+      "descriptionTextModule": "Gérer les offres groupées"
+    },
+    "list": {
+      "addButtonText": "Ajouter un paquet",
+      "columnName": "Nom",
+      "columnDiscountType": "Type de remise",
+      "columnDiscount": "Rabais"
+    },
+    "detail": {
+      "nameLabel": "Nom",
+      "discountLabel": "Discount",
+      "discountTypeLabel": "Type de remise",
+      "assignProductsLabel": "Assigner des produits",
+      "cancelButtonText": "Annuler",
+      "saveButtonText": "Sauvegarder",
+      "errorTitle": "Erreur de sauvegarde du paquet",
+      "absoluteText": "Absolu",
+      "percentageText": "Pourcentage"
+    }
+  }
+}
