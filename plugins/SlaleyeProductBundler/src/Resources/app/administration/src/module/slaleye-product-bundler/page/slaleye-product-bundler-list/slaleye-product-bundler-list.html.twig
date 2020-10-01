@@ -1,5 +1,12 @@
 {% block slaleye_product_bundler_list %}
     <sw-page class="slaleye-product-bundler-list">
+        {% block slaleye_product_bundler_list_smart_bar_actions %}
+            <template slot="smart-bar-actions">
+                <sw-button variant="primary" :routerLink="{ name: 'slaleye.product.bundler.create' }">
+                    {{ $t('slaleye-product-bundler.list.addButtonText') }}
+                </sw-button>
+            </template>
+        {% endblock %}
         <template slot="content">
             {% block slaleye_product_bundler_list_content %}
                 <sw-entity-listing
