@@ -21,5 +21,12 @@
       "absoluteText": "Absolu",
       "percentageText": "Pourcentage"
     }
+  },
+  "sw-product": {
+    "detail": {
+      "bundleCardLabel": "Bundles",
+      "bundleSelectLabel": "Offres groupées",
+      "bundleSelectPlaceholder": "Ajouter une offre groupée..."
+    }
   }
 }
