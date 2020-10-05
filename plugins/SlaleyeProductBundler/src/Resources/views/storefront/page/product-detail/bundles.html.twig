@@ -1,0 +1,36 @@
+{% block page_product_detail_tabs_content_bundles %}
+
+    {% for bundle in product_bundle %}
+        <h2>{{ bundle.name }}</h2>
+        <div class="row">
+            {% for product in bundle.products.elements %}
+                <div class="col-4">
+                    {% sw_include '@Storefront/storefront/component/product/card/box-standard.html.twig' with {'product': product} %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row justify-content-md-center">
+            <form action="{{ path('frontend.checkout.line-item.add') }}"
+                  method="post"
+                  class="buy-widget js-add-to-cart"
+                  data-add-to-cart="true">
+
+                {{ sw_csrf('frontend.checkout.line-item.add') }}
+
+                <div class="form-row buy-widget-container">
+                    <button class="btn btn-primary btn-block buy-widget-submit" style="margin-top: 10px;">
+                        Buy bundle and save {{ bundle.discount }} {{ bundle.discountType == 'absolute' ? context.currency.symbol : '%' }}
+                    </button>
+
+                    <input type="hidden" name="lineItems[{{ bundle.id }}][id]" value="{{ bundle.id }}">
+                    <input type="hidden" name="lineItems[{{ bundle.id }}][type]" value="slaleye_product_bundler_bundle">
+                    <input type="hidden" name="lineItems[{{ bundle.id }}][quantity]" value="1">
+                    <input type="hidden" name="lineItems[{{ bundle.id }}][referencedId]" value="{{ bundle.id }}">
+                    <input type="hidden" name="redirectTo" value="frontend.cart.offcanvas"/>
+                </div>
+            </form>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}

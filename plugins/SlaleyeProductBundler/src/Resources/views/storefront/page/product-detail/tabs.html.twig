@@ -1,0 +1,35 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
+
+
+{% block page_product_detail_tabs_navigation_description %}
+    {{ parent() }}
+    {% if page.product.extension('bundles').elements|length > 0 %}
+        <li class="nav-item">
+            <a class="nav-link"
+               id="bundle-tab"
+               data-toggle="tab"
+               data-offcanvas-tab="true"
+               href="#bundle-tab-pane"
+               role="tab"
+               aria-controls="bundle-tab-pane"
+               aria-selected="false">
+                <span>Bundles</span>
+            </a>
+        </li>
+    {% endif %}
+{% endblock %}
+
+
+{% block page_product_detail_tabs_content_description %}
+    {{ parent() }}
+    {% if page.product.extension('bundles').elements|length > 0 %}
+        <div class="tab-pane fade"
+             id="bundle-tab-pane"
+             role="tabpanel"
+             aria-labelledby="bundle-tab">
+            {% sw_include '@Storefront/storefront/page/product-detail/bundles.html.twig' with{
+                'product_bundle':page.product.extension('bundles').elements
+            } %}
+        </div>
+    {% endif %}
+{% endblock %}
