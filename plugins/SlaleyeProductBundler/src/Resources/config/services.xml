@@ -25,5 +25,15 @@
         <service id="Slaleye\ProductBundler\Storefront\Page\Product\Subscriber\ProductPageCriteriaSubscriber">
             <tag name="kernel.event_subscriber"/>
         </service>
+
+        <service id="Slaleye\ProductBundler\Resources\snippet\en_GB\SnippetFile_en_GB">
+            <tag name="shopware.snippet.file"/>
+        </service>
+        <service id="Slaleye\ProductBundler\Resources\snippet\fr_FR\SnippetFile_fr_FR">
+            <tag name="shopware.snippet.file"/>
+        </service>
+        <service id="Slaleye\ProductBundler\Resources\snippet\de_DE\SnippetFile_de_DE">
+            <tag name="shopware.snippet.file"/>
+        </service>
     </services>
 </container>

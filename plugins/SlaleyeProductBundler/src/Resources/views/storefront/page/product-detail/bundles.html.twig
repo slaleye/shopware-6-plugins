@@ -19,7 +19,7 @@
 
                 <div class="form-row buy-widget-container">
                     <button class="btn btn-primary btn-block buy-widget-submit" style="margin-top: 10px;">
-                        Buy bundle and save {{ bundle.discount }} {{ bundle.discountType == 'absolute' ? context.currency.symbol : '%' }}
+                        {{ 'slaleye-product-bundler.detail.buyButtonText'|trans({ '%bundleDiscount%': bundle.discountType == 'absolute' ? bundle.discount|currency : (bundle.discount ~ '%') }) }}
                     </button>
 
                     <input type="hidden" name="lineItems[{{ bundle.id }}][id]" value="{{ bundle.id }}">

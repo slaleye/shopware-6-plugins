@@ -1,0 +1,9 @@
+{
+  "slaleye-product-bundler": {
+    "detail": {
+      "bundleBadge": "Bundle",
+      "bundleTabName": "Offre groupées",
+      "buyButtonText": "Acheter une offre groupée et économiser %bundleDiscount%"
+    }
+  }
+}

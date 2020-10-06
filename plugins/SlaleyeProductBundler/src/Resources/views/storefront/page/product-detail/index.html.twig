@@ -4,7 +4,7 @@
 {% block page_product_detail_content %}
 
     {% if page.product.extension('bundles').elements|length > 0 %}
-        <div class="badge badge-primary">Bundle</div>
+        <div class="badge badge-primary">{{ "slaleye-product-bundler.detail.bundleBadge"|trans }}</div>
     {% endif %}
 
     {{ parent() }}

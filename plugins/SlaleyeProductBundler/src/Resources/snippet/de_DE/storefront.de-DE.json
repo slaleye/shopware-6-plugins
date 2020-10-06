@@ -1,0 +1,9 @@
+{
+  "slaleye-product-bundler": {
+    "detail": {
+      "bundleBadge": "Bundle",
+      "bundleTabName": "Bundles",
+      "buyButtonText": "Bundle kaufen und sparen %bundleDiscount%"
+    }
+  }
+}
