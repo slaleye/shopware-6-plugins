@@ -35,5 +35,16 @@
         <service id="Slaleye\ProductBundler\Resources\snippet\de_DE\SnippetFile_de_DE">
             <tag name="shopware.snippet.file"/>
         </service>
+
+        <service id="Slaleye\ProductBundler\Core\Checkout\Bundle\Cart\BundleCartProcessor">
+            <argument type="service" id="slaleye_product_bundler_bundle.repository"/>
+            <argument type="service" id="Shopware\Core\Checkout\Cart\Price\PercentagePriceCalculator"/>
+            <argument type="service" id="Shopware\Core\Checkout\Cart\Price\AbsolutePriceCalculator"/>
+            <argument type="service" id="Shopware\Core\Checkout\Cart\Price\QuantityPriceCalculator"/>
+
+            <!-- inject before product processor (5000) -->
+            <tag name="shopware.cart.processor" priority="6000" />
+            <tag name="shopware.cart.collector" priority="6000" />
+        </service>
     </services>
 </container>

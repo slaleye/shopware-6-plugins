@@ -25,6 +25,12 @@ class BundleEntity extends Entity
     /**
      * @var ProductCollection|null
      */
+
+    /**
+     * @var string
+     */
+    protected $name;
+
     protected $products;
 
     public function getDiscountType(): string
@@ -55,5 +61,15 @@ class BundleEntity extends Entity
     public function setProducts(ProductCollection $products): void
     {
         $this->products = $products;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): void
+    {
+        $this->name = $name;
     }
 }
