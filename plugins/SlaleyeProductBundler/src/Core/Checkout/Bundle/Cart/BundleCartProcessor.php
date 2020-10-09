@@ -183,7 +183,7 @@ class BundleCartProcessor implements CartProcessorInterface, CartDataCollectorIn
         }
 
         $bundleLineItem->setRemovable(true)
-            ->setStackable(true)
+            ->setStackable(true) // TODO Exercise
             ->setDeliveryInformation(
                 new DeliveryInformation(
                     $firstBundleProduct->getStock(),

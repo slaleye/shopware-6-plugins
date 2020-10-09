@@ -28,5 +28,12 @@
       "bundleSelectLabel": "Bundles",
       "bundleSelectPlaceholder": "Bündel hinzufügen..."
     }
+  },
+  "sw-condition": {
+    "condition": {
+      "cartContainsBundle": {
+        "label": "Warenkorb enthält Bundle"
+      }
+    }
   }
 }

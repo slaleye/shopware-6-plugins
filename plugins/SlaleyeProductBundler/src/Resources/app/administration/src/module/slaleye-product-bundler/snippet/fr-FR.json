@@ -28,5 +28,12 @@
       "bundleSelectLabel": "Offres groupées",
       "bundleSelectPlaceholder": "Ajouter une offre groupée..."
     }
+  },
+  "sw-condition": {
+    "condition": {
+      "cartContainsBundle": {
+        "label": "Le panier contient une offre groupée"
+      }
+    }
   }
 }
