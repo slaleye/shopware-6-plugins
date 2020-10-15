@@ -1,0 +1,71 @@
+{% block slaleye_shop_finder_detail %}
+    <sw-page class="slaleye-shop-finder-detail">
+        <template slot="smart-bar-actions">
+            <sw-button :routerLink="{ name: 'slaleye-shop-finder.list' }">
+                {{ $t('slaleye-shop-finder.page.detail.cancelButtonText') }}
+            </sw-button>
+
+            <sw-button-process
+                    :isLoading="isLoading"
+                    :processSuccess="processSuccess"
+                    variant="primary"
+                    @process-finish="saveFinish"
+                    @click="onClickSave">
+                {{ $t('slaleye-shop-finder.page.detail.saveButtonText') }}
+            </sw-button-process>
+        </template>
+
+        <template slot="content">
+            <sw-card-view>
+                <sw-card v-if="shop" :isLoading="isLoading">
+
+                    <sw-field :label="$t('slaleye-shop-finder.page.detail.nameLabel')"
+                              v-model="shop.name"
+                              required></sw-field>
+
+                    <sw-field :label="$t('slaleye-shop-finder.page.detail.streetNameLabel')"
+                              v-model="shop.streetName"
+                              required></sw-field>
+
+                    <sw-field :label="$t('slaleye-shop-finder.page.detail.streetNumberLabel')"
+                              v-model="shop.streetNumber"
+                              type="number"
+                              numberType="int"
+                              required></sw-field>
+
+                    <sw-field :label="$t('slaleye-shop-finder.page.detail.cityLabel')"
+                              v-model="shop.city"
+                              required></sw-field>
+
+                    <sw-field :label="$t('slaleye-shop-finder.page.detail.postCodeLabel')"
+                              v-model="shop.postCode"
+                              required></sw-field>
+
+                    <sw-field :label="$t('slaleye-shop-finder.page.detail.websiteLabel')"
+                              v-model="shop.website"></sw-field>
+
+                    <sw-field :label="$t('slaleye-shop-finder.page.detail.telephoneLabel')"
+                              v-model="shop.telephone"></sw-field>
+
+                    <sw-field :label="$t('slaleye-shop-finder.page.detail.openingHoursLabel')"
+                              v-model="shop.openingHours"
+                              ></sw-field>
+
+                    <sw-field type="checkbox"
+                              :label="$t('slaleye-shop-finder.page.detail.activeLabel')"
+                              v-model="shop.active">
+                    </sw-field>
+
+
+                    <sw-entity-single-select
+                            :localMode="shop.isNew()"
+                            :label="$t('slaleye-shop-finder.page.detail.assignCountryLabel')"
+                            entity="country"
+                            required
+                            v-model="shop.country">
+                    </sw-entity-single-select>
+                </sw-card>
+            </sw-card-view>
+        </template>
+    </sw-page>
+{% endblock %}

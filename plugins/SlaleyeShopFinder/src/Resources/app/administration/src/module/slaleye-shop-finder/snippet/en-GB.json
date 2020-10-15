@@ -1,0 +1,36 @@
+{
+  "slaleye-shop-finder": {
+
+    "module": {
+      "titleText": "Shop Finder",
+      "descriptionText": "Add Additional Shops"
+    },
+
+    "page": {
+     "detail": {
+       "errorTitle": "Shop could not be created.",
+       "saveButtonText": "Save",
+       "cancelButtonText": "Cancel",
+       "nameLabel": "Shop Name",
+       "streetNameLabel":"Street",
+       "streetNumberLabel":"Street No",
+       "cityLabel":"City",
+       "postCodeLabel":"Post code",
+       "websiteLabel":"Website",
+       "telephoneLabel":"Telephone",
+       "openingHoursLabel":"Opening Hours",
+       "activeLabel": "Active",
+       "assignCountryLabel": "Choose Country"
+     },
+      "list": {
+          "addButtonText": "Add Shop",
+          "columnName": "Name",
+          "columnStreetName": "Street",
+          "columnCity": "City",
+          "columnActive": "Active"
+      }
+    }
+
+  }
+
+}

@@ -20,7 +20,7 @@ class Migration1601307538 extends MigrationStep
        `active` TINYINT(1) NULL DEFAULT '0',
        `name` VARCHAR(255) NOT NULL,
        `street_name` VARCHAR(255) NOT NULL,
-       `street_number` VARCHAR(255) NOT NULL,
+       `street_number` INT NOT NULL,
        `city` VARCHAR(255) NOT NULL,
        `post_code` VARCHAR(255) NOT NULL,
        `website` VARCHAR(255) NULL,

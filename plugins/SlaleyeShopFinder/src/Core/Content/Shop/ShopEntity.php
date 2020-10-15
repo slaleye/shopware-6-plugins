@@ -109,9 +109,9 @@ class ShopEntity extends Entity
     }
 
     /**
-     * @param string $streetNumber
+     * @param int $streetNumber
      */
-    public function setStreetNumber(string $streetNumber)
+    public function setStreetNumber(int $streetNumber)
     {
         $this->streetNumber = $streetNumber;
     }

@@ -1,0 +1,23 @@
+{% block slaleye_shop_finder_list %}
+    <sw-page class="slaleye-shop-finder-list">
+        {% block slaleye_shop_finder_list_smart_bar_actions %}
+            <template slot="smart-bar-actions">
+                <sw-button variant="primary" :routerLink="{ name: 'slaleye.shop.finder.create' }">
+                    {{ $t('slaleye-shop-finder.page.list.addButtonText') }}
+                </sw-button>
+            </template>
+        {% endblock %}
+        <template slot="content">
+            {% block slaleye_shop_finder_list_content %}
+                <sw-entity-listing
+                        v-if="shops"
+                        :items="shops"
+                        :repository="repository"
+                        :showSelection="false"
+                        :columns="columns"
+                        detailRoute="slaleye.shop.finder.detail">
+                </sw-entity-listing>
+            {% endblock %}
+        </template>
+    </sw-page>
+{% endblock %}

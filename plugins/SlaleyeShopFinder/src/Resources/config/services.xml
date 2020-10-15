@@ -6,7 +6,7 @@
 
     <services>
         <service id="Slaleye\ShopFinder\Core\Content\Shop\ShopDefinition">
-            <tag name="shopware.entity.definition" entity="slaleye_shop"></tag>
+            <tag name="shopware.entity.definition" entity="slaleye_shop_finder_shop"></tag>
         </service>
 
         <service id="Slaleye\ShopFinder\Core\Api\DemoDataController" public="true">

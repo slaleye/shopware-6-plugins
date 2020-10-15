@@ -1,0 +1,1 @@
+import './module/slaleye-shop-finder';
