@@ -182,8 +182,15 @@ class BundleCartProcessor implements CartProcessorInterface, CartDataCollectorIn
             $firstBundleProductDeliveryTime = DeliveryTime::createFromEntity($firstBundleProductDeliveryTime);
         }
 
+        // Check if Bundle is stackable
+
+        if($bundle->isStackable()){
+            $bundleLineItem->setStackable(true);// Exercise
+        }else{
+            $bundleLineItem->setStackable(false);// Exercise
+        }
+
         $bundleLineItem->setRemovable(true)
-            ->setStackable(true) // TODO Exercise
             ->setDeliveryInformation(
                 new DeliveryInformation(
                     $firstBundleProduct->getStock(),

@@ -19,7 +19,8 @@
       "saveButtonText": "Sauvegarder",
       "errorTitle": "Erreur de sauvegarde du paquet",
       "absoluteText": "Absolu",
-      "percentageText": "Pourcentage"
+      "percentageText": "Pourcentage",
+      "stackableLabel": "Peut être cumulé."
     }
   },
   "sw-product": {

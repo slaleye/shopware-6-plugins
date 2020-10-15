@@ -17,12 +17,13 @@ class Migration1601453144Bundle extends MigrationStep
 
     public function update(Connection $connection): void
     {
-
+/* Exercise Add new field stackable */
         $connection->executeUpdate('
             CREATE TABLE IF NOT EXISTS `slaleye_product_bundler_bundle` (
               `id` BINARY(16) NOT NULL,
               `discount_type` VARCHAR(255) NOT NULL,
               `discount` DOUBLE NOT NULL,
+              `stackable` TINYINT(1) NULL DEFAULT 0,
               `created_at` DATETIME(3) NOT NULL,
               `updated_at` DATETIME(3) NULL,
               PRIMARY KEY (`id`)

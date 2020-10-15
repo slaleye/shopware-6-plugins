@@ -30,6 +30,12 @@
                               :options="options">
                     </sw-field>
 
+                    <sw-field type="checkbox"
+                              :label="$t('slaleye-product-bundler.detail.stackableLabel')"
+                              v-model="bundle.stackable">
+                    </sw-field>
+
+
                     <sw-entity-many-to-many-select
                             :localMode="bundle.isNew()"
                             :label="$t('slaleye-product-bundler.detail.assignProductsLabel')"

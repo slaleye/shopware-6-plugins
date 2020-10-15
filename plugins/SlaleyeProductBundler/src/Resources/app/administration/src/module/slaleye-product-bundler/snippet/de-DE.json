@@ -19,7 +19,8 @@
       "saveButtonText": "Speichern",
       "errorTitle": "Fehler beim Speichern des Bundles",
       "absoluteText": "absolut",
-      "percentageText": "Prozentsatz"
+      "percentageText": "Prozentsatz",
+      "stackableLabel": "Ist stapelbar."
     }
   },
   "sw-product": {

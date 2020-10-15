@@ -33,6 +33,31 @@ class BundleEntity extends Entity
 
     protected $products;
 
+    /**
+     * Exercise begin --
+     * @var bool
+     */
+    protected $stackable;
+
+    /**
+     * @return bool
+     */
+    public function isStackable(): bool
+    {
+        return $this->stackable;
+    }
+
+    /**
+     * @param bool $stackable
+     */
+    public function setStackable(bool $stackable)
+    {
+        $this->stackable = $stackable;
+    }
+    /**
+     * Exercise End --
+     */
+
     public function getDiscountType(): string
     {
         return $this->discountType;

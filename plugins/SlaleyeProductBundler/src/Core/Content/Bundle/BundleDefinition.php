@@ -6,6 +6,7 @@ namespace Slaleye\ProductBundler\Core\Content\Bundle;
 
 use Shopware\Core\Content\Product\ProductDefinition;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityDefinition;
+use Shopware\Core\Framework\DataAbstractionLayer\Field\BoolField;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\Flag\PrimaryKey;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\Flag\Required;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\FloatField;
@@ -42,6 +43,7 @@ class BundleDefinition extends EntityDefinition
     {
         return new FieldCollection([
             (new IdField('id', 'id'))->addFlags(new Required(), new PrimaryKey()),
+            (new BoolField('stackable', 'stackable')), // Exercise
             new TranslatedField('name'), // Make string name translatable
             (new StringField('discount_type', 'discountType'))->addFlags(new Required()),
             (new FloatField('discount', 'discount'))->addFlags(new Required()),
