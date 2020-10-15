@@ -2,7 +2,7 @@
 
 
 {% block page_product_detail_content %}
- {{ dump(page.product) }}
+
     {% if page.product.extension('slaleyePblrBundles').elements|length > 0 %}
         <div class="badge badge-primary">{{ "slaleye-product-bundler.detail.bundleBadge"|trans }}</div>
     {% endif %}
