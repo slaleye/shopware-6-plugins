@@ -4,8 +4,8 @@
     <sw-card :title="$t('sw-product.detail.bundleCardLabel')"
              :isLoading="isLoading">
         <sw-inherit-wrapper v-if="!isLoading"
-                            v-model="product.extensions.bundles"
-                            :inheritedValue="parentProduct.extensions ? parentProduct.extensions.bundles : null"
+                            v-model="product.extensions.slaleyePblrBundles"
+                            :inheritedValue="parentProduct.extensions ? parentProduct.extensions.slaleyePblrBundles : null"
                             :hasParent="!!parentProduct.id"
                             :label="$t('sw-product.detail.bundleSelectLabel')"
                             isAssociation

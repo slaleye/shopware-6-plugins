@@ -19,7 +19,7 @@ class ProductExtension extends EntityExtension
     {
         $collection->add(
             (new ManyToManyAssociationField(
-                'bundles',
+                'slaleyePblrBundles',
                 BundleDefinition::class,
                 BundleProductDefinition::class,
                 'product_id',

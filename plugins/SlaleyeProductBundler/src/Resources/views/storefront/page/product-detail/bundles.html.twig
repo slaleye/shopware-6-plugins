@@ -1,7 +1,7 @@
 {% block page_product_detail_tabs_content_bundles %}
 
     {% for bundle in product_bundle %}
-        <h2>{{ bundle.name }}</h2>
+        <h2 class="slaleye-product-bundler">{{ bundle.name }}</h2>
         <div class="row">
             {% for product in bundle.products.elements %}
                 <div class="col-4">

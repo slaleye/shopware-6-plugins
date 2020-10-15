@@ -33,6 +33,6 @@ class SlaleyeProductBundler extends Plugin
         $connection->executeUpdate('DROP TABLE IF EXISTS `slaleye_product_bundler_bundle_product`');
         $connection->executeUpdate('DROP TABLE IF EXISTS `slaleye_product_bundler_bundle_translation`');
         $connection->executeUpdate('DROP TABLE IF EXISTS `slaleye_product_bundler_bundle`');
-        $connection->executeUpdate('ALTER TABLE `product` DROP COLUMN `bundles`');
+        $connection->executeUpdate('ALTER TABLE `product` DROP COLUMN `slaleyePblrBundles`');
     }
 }

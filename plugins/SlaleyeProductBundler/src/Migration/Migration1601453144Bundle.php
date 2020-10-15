@@ -45,7 +45,7 @@ class Migration1601453144Bundle extends MigrationStep
 
 
         /* For every inherited field you have to add a binary column to the entity, which is used for saving the inherited information in a read optimized manner. */
-        $this->updateInheritance($connection, 'product', 'bundles');
+        $this->updateInheritance($connection, 'product', 'slaleyePblrBundles');
 
         // Translation Table
         $connection->executeUpdate('
