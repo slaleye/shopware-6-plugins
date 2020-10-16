@@ -3,4 +3,4 @@ Collection Of Shopware & Plugins as part of the Shopware 6 Developer Training Le
 
 https://academy.shopware.com/courses/developer-training-basic-english
 
-Clone this repos in your <Shopware Installation Root>/custom/
+Clone this repos in your ShopwareInstallationRoot/custom/
