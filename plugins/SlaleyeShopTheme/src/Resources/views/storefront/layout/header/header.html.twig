@@ -1,0 +1,11 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+   {% block layout_header_actions_account %}
+
+       <div class="col-auto">
+           <a class="btn header-actions-btn" title="Payments" href="{{ path('frontend.account.payment.page') }}">
+               {% sw_icon 'money-card' %}
+           </a>
+       </div>
+       {{ parent() }}
+   {% endblock %}
