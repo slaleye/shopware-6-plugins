@@ -17,5 +17,47 @@
     ],
     "asset": [
         "app/storefront/src/assets"
-    ]
+    ],
+    "config": {
+        "blocks": {
+            "settings": {
+                "label": {
+                    "en-GB": "Color Settings"
+                }
+            }
+        },
+        "sections": {
+            "overriddenVariables": {
+                "label": {
+                    "en-GB": "Overridden Variables"
+                }
+            },
+            "newVariables": {
+                "label": {
+                    "en-GB": "New Variables"
+                }
+            }
+        },
+        "fields": {
+            "sw-color-brand-primary": {
+                "label": {
+                    "en-GB": "Primary Color"
+                },
+                "type": "color",
+                "block": "settings",
+                "section": "overriddenVariables",
+                "value": "#48AB18"
+            },
+            "card-color": {
+                "label": {
+                    "en-GB": "Card Color"
+                },
+                "editable": true,
+                "type": "color",
+                "block": "settings",
+                "section": "newVariables",
+                "value": "#FFF"
+            }
+        }
+    }
 }
