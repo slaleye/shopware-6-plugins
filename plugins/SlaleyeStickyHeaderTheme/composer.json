@@ -1,0 +1,25 @@
+{
+  "name": "slaleye/sticky-header-theme",
+  "description": "Slaleye Sticky Header Theme",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+    "version": "v0.0.1",
+    "authors": [
+        {
+            "name": "slaleye"
+        }
+    ],
+  "autoload": {
+    "psr-4": {
+      "Slaleye\\StickyHeaderTheme\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "Slaleye\\StickyHeaderTheme\\SlaleyeStickyHeaderTheme",
+      "plugin-icon": "src/Resources/config/plugin.png",
+      "label": {
+      "de-DE": "Slaleye Sticky Header Theme",
+      "en-GB": "Slaleye Sticky Header Theme"
+    }
+  }
+}
